@@ -28,9 +28,10 @@
   line-height: 25px;
   color: #9c9c9c;
   font-size: 14px;
+  max-width: 540px;
 }
 .portfolio-intro-button {
-  padding: 20px 60px;
+  padding: 12px 30px;
   cursor: pointer;
   width: fit-content;
   background-color: rgb(36, 190, 52);
@@ -39,8 +40,13 @@
   font-weight: 600;
   border: none;
   border-radius: 5px;
+  transition: background-color 0.2s;
+}
+.portfolio-intro-button:hover {
+  background-color: rgb(28, 160, 43);
 }
 .portfolio-photo {
+  display: flex;
   justify-content: center;
   align-items: center;
   flex: 1;
@@ -49,11 +55,14 @@
 .ali-photo {
   width: 70%;
   border-radius: 50%;
+  display: block;
+  box-shadow: 0 0 40px rgba(36, 190, 52, 0.15);
 }
 
 .portfolio-worked-with {
   display: flex;
   flex-direction: column;
+  gap: 12px;
 }
 .portfolio-worked-with p {
   color: white;
@@ -65,15 +74,20 @@
   border-bottom: none;
   display: flex;
   justify-content: space-between;
-  /* background-color: white; */
   padding: 0;
 }
 .portfolio-worked-with ul li {
+  display: flex;
+  align-items: center;
   background-color: #000000;
   color: white;
   border: 1px solid #333;
-  padding: 10px 50px;
+  padding: 10px 30px;
   border-radius: 5px;
+  transition: border-color 0.2s;
+}
+.portfolio-worked-with ul li:hover {
+  border-color: #555;
 }
 .portfolio-worked-with-logo {
   height: 40px;
