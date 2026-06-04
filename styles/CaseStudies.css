@@ -2,9 +2,9 @@
   background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 10px;
   min-height: 100vh;
-  padding: 60px 140px;
+  padding: 60px 120px;
 }
 .case-studies-intro {
   display: flex;
@@ -31,11 +31,17 @@
   line-height: 25px;
 }
 .case-studies-project {
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 30px;
   display: flex;
   gap: 50px;
   align-items: center;
 }
 .case-studies-project.reverse {
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 30px;
   flex-direction: row-reverse;
 }
 .projects-details {
@@ -73,6 +79,9 @@
 .project-details-button.black {
   background-color: rgb(0, 0, 0);
 }
+.project-details-button.gray {
+  background-color: rgb(113, 109, 109);
+}
 .project-photo {
   flex: 1;
   display: grid;
@@ -105,5 +114,9 @@
 }
 .project-tag.black {
   background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+.project-tag.white {
+  background-color: rgb(113, 109, 109);
   color: rgb(255, 255, 255);
 }
