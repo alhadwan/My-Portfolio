@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/styles/home.css" />
     <link rel="stylesheet" href="/styles/CaseStudies.css" />
     <link rel="stylesheet" href="/styles/projectHighlightd.css" />
+    <link rel="stylesheet" href="/styles/recentWork.css" />
   </head>
   <body>
     <header class="portfolio-header">
@@ -378,9 +379,111 @@
           </div>
         </div>
       </section>
+      <!-- Recent-work/Experience -->
+      <section class="recent-work">
+        <div class="recent-work-intro">
+          <h1>Experience</h1>
+          <p>
+            Professional experience building full-stack applications,
+            collaborating in agile environments, and delivering secure, scalable
+            software solutions using modern web technologies.
+          </p>
+        </div>
+        <div class="recent-work-carousel">
+          <i id="left" class="left-arrow arrows">&#60;</i>
+          <div class="recent-work-carousel-card1 carouselcard">
+            <div class="card-img"><img src="/images/Logo_-_Green.png" /></div>
+
+            <h4>Coding Temple | Remote</h4>
+            <p>
+              Contributed to full-stack applications using React, TypeScript,
+              Flask, and Docker. Developed secure REST APIs, implemented
+              automated testing, documented APIs with Swagger, and collaborated
+              using modern CI/CD workflows.
+            </p>
+            <button type="button">Know more ></button>
+          </div>
+          <div class="recent-work-carousel-card2 carouselcard">
+            <div class="card-img"><img src="/images/eznewlogotrans.png" /></div>
+
+            <h4>EZParking Client Project</h4>
+            <p>
+              Designed and deployed a parking reservation platform featuring
+              Stripe payment processing, JWT authentication, PostgreSQL database
+              design, automated testing, and cloud deployment on Render.
+            </p>
+            <button
+              type="button"
+              href="https://ez-public-parking-v2.onrender.com/"
+            >
+              Know more >
+            </button>
+          </div>
+          <div class="recent-work-carousel-card3 carouselcard">
+            <div class="card-img"><img src="/images/sample.jpg" /></div>
+            <h4>Work name here</h4>
+            <p>
+              Labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut
+              labore et dolore magna.
+            </p>
+            <button type="button">Know more ></button>
+          </div>
+          <div class="recent-work-carousel-card4 carouselcard">
+            <div class="card-img"><img src="/images/sample.jpg" /></div>
+            <h4>Work name here</h4>
+            <p>
+              Labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut
+              labore et dolore magna.
+            </p>
+            <button type="button">Know more ></button>
+          </div>
+          <i id="right" class="right-arrow arrows">&#62;</i>
+        </div>
+      </section>
     </main>
     <footer>
       <div></div>
     </footer>
+    <script>
+      const carousel = document.querySelector(".recent-work-carousel");
+      const cards = Array.from(carousel.querySelectorAll(".carouselcard"));
+      const leftArrow = document.getElementById("left");
+      const rightArrow = document.getElementById("right");
+
+      let currentIndex = 0; // tracks the index of the first visible card this case the first card in the carousel 0-3
+      const visibleCount = 2;
+
+      function updateCarousel() {
+        // loop through cards and set display based on currentIndex and visibleCount
+        //
+        cards.forEach((card, i) => {
+          card.style.display =
+            i >= currentIndex && i < currentIndex + visibleCount
+              ? "flex"
+              : "none";
+        });
+        // update arrow opacity based on currentIndex and visibleCount
+        leftArrow.style.opacity = currentIndex === 0 ? "0.3" : "1";
+        // update arrow opacity based on currentIndex and visibleCount
+        rightArrow.style.opacity =
+          currentIndex + visibleCount >= cards.length ? "0.3" : "1";
+      }
+      // add click event listeners to arrows
+      leftArrow.addEventListener("click", () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateCarousel();
+        }
+      });
+      // add click event listeners to arrows
+      rightArrow.addEventListener("click", () => {
+        if (currentIndex + visibleCount < cards.length) {
+          currentIndex++;
+          updateCarousel();
+        }
+      });
+
+      updateCarousel();
+    </script>
   </body>
 </html>
