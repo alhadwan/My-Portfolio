@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="/styles/CaseStudies.css" />
     <link rel="stylesheet" href="/styles/projectHighlightd.css" />
     <link rel="stylesheet" href="/styles/recentWork.css" />
+    <link rel="stylesheet" href="/styles/getInTouch.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
   </head>
   <body>
     <header class="portfolio-header">
@@ -380,7 +382,7 @@
         </div>
       </section>
       <!-- Recent-work/Experience -->
-      <section class="recent-work">
+      <section id="recent-work">
         <div class="recent-work-intro">
           <h1>Experience</h1>
           <p>
@@ -414,7 +416,7 @@
             </p>
             <button
               type="button"
-              href="https://ez-public-parking-v2.onrender.com/"
+              onclick="window.location.href='https://ez-public-parking-v2.onrender.com/'"
             >
               Know more >
             </button>
@@ -440,10 +442,49 @@
           <i id="right" class="right-arrow arrows">&#62;</i>
         </div>
       </section>
+      <!--Get In Touch Section-->
+      <section id="get-in-touch">
+        <div class="get-in-touch-intro">
+          <h1>Get In Touch</h1>
+          <p>
+            I'm currently seeking Full-Stack Software Engineer opportunities and
+            freelance projects. Whether you'd like to discuss a role,
+            collaborate on a project, or simply connect, I'd be happy to hear
+            from you.
+          </p>
+        </div>
+        <div class="get-in-touch-contact">
+          <form class="get-in-touch-contact-form">
+            <div class="get-in-touch-contact-form-name">
+              <label>Name</label>
+              <input type="text" placeholder="enter Name" />
+            </div>
+            <div class="get-in-touch-contact-form-email">
+              <label>Email</label>
+              <input type="text" placeholder="enter email" />
+            </div>
+            <div class="get-in-touch-contact-form-message">
+              <label>Message</label>
+              <textarea
+                rows="5"
+                cols="30"
+                draggable="false"
+                placeholder="Type your message here..."
+              ></textarea>
+            </div>
+            <div>
+              <button class="get-in-touch-contact-form-submit" type="submit">
+                Submit >
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <footer>
+        <div class="footer">Copyright &copy; 2026</div>
+      </footer>
     </main>
-    <footer>
-      <div></div>
-    </footer>
+
     <script>
       const carousel = document.querySelector(".recent-work-carousel");
       const cards = Array.from(carousel.querySelectorAll(".carouselcard"));

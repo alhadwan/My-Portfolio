@@ -1,0 +1,78 @@
+#get-in-touch {
+  background-color: black;
+  min-height: 100vh;
+  padding: 60px 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.get-in-touch-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.get-in-touch-intro h1::after {
+  background-color: white;
+  content: "";
+  display: block;
+  margin: 1px auto 0;
+  height: 3px;
+  width: 60px;
+  border-radius: 3px;
+}
+.get-in-touch-intro p {
+  text-align: center;
+  line-height: 25px;
+  max-width: 700px;
+  margin: 15px auto;
+  font-weight: 500;
+  color: #9c9c9c;
+}
+
+.get-in-touch-contact {
+  border-radius: 8px;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.get-in-touch-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.get-in-touch-contact-form-email,
+.get-in-touch-contact-form-message,
+.get-in-touch-contact-form-submit,
+.get-in-touch-contact-form-name {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: white;
+}
+.get-in-touch-contact-form-message textarea {
+  resize: none;
+}
+
+.get-in-touch-contact-form input,
+.get-in-touch-contact-form textarea {
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: none;
+}
+.get-in-touch-contact-form-submit {
+  background-color: green;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+}
