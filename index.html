@@ -20,33 +20,44 @@
   </head>
   <body>
     <header class="portfolio-header">
-      <nav class="portfolio-navs">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#case-studies">Case Studies</a></li>
-          <li><a href="#project-highlights">Project Highlights</a></li>
-          <li><a href="#recent-work">Recent work</a></li>
-          <li><a href="#get-in-touch">Get In Touch</a></li>
-        </ul>
-      </nav>
+      <a class="header-logo" href="#home" aria-label="Ali Hadwan home">AH</a>
+      <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
 
-      <div class="portfolio-social-links">
-        <a
-          href="https://www.linkedin.com/in/ali-hadwan/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Visit our LinkedIn profile"
-        >
-          LinkedIn
-        </a>
-        <a
-          href="https://github.com/alhadwan"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Visit our GitHub profile"
-        >
-          GitHub
-        </a>
+      <label for="menu-toggle" class="hamburger-label">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <div class="mobile-menu">
+        <nav class="portfolio-navs">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#case-studies">Case Studies</a></li>
+            <li><a href="#project-highlights">Project Highlights</a></li>
+            <li><a href="#recent-work">Recent work</a></li>
+            <li><a href="#get-in-touch">Get In Touch</a></li>
+          </ul>
+        </nav>
+
+        <div class="portfolio-social-links">
+          <a
+            href="https://www.linkedin.com/in/ali-hadwan/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit our LinkedIn profile"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/alhadwan"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit our GitHub profile"
+          >
+            GitHub
+          </a>
+        </div>
       </div>
     </header>
     <main>
@@ -433,7 +444,10 @@
             </p>
             <button
               type="button"
-              onclick="window.location.href='https://ez-public-parking-v2.onrender.com/'"
+              onclick="
+                window.location.href =
+                  'https://ez-public-parking-v2.onrender.com/'
+              "
             >
               Know more >
             </button>

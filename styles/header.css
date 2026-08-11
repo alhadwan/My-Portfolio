@@ -1,12 +1,46 @@
 .portfolio-header {
   background-color: rgb(27, 27, 27);
   display: flex;
+  align-items: center;
   gap: 30px;
   margin: 0 50px;
   padding: 5px;
   position: sticky;
   top: 0;
   z-index: 100;
+}
+
+.header-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: aliceblue;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.header-logo:hover,
+.header-logo:focus-visible {
+  background-color: rgb(36, 190, 52);
+  color: white;
+}
+
+.menu-checkbox,
+.hamburger-label {
+  display: none;
+}
+
+.mobile-menu {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 30px;
 }
 
 .portfolio-navs {
@@ -34,7 +68,7 @@ nav ul li a:hover {
 
 .portfolio-social-links {
   display: flex;
-  /* flex-wrap: wrap; */
+
   flex: 1;
   justify-content: center;
   align-items: center;
@@ -52,23 +86,71 @@ nav ul li a:hover {
 }
 /* Mobile */
 @media (max-width: 768px) {
-  .portfolio-social-links {
-    display: flex;
-    flex-direction: column;
-    /* flex-wrap: wrap; */
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
+  .portfolio-header {
+    flex-wrap: wrap;
   }
-  nav ul {
-    list-style: none;
-    border-bottom: none;
+
+  .hamburger-label {
     display: flex;
     flex-direction: column;
-    /* flex-wrap: wrap; */
-    justify-content: space-around;
-    align-items: center;
-    gap: 20px;
+    justify-content: space-between;
+    border: 1px solid #7e7d7d;
+    padding: 5px;
+    height: 17px;
+    width: 21px;
+    cursor: pointer;
+  }
+
+  .header-logo {
+    margin-right: auto;
+  }
+  /* Draw the 3 horizontal bars using span tags */
+  .hamburger-label span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #7e7d7d;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  .mobile-menu {
+    display: none;
+    flex: 0 0 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .portfolio-navs,
+  .portfolio-social-links {
+    flex: none;
+    width: 100%;
+  }
+
+  .portfolio-social-links {
+    flex-direction: column;
+  }
+
+  .portfolio-navs ul {
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Show the complete menu when the menu checkbox is checked */
+  .menu-checkbox:checked ~ .mobile-menu {
+    display: flex;
+  }
+  /*  */
+  .menu-checkbox:checked ~ .hamburger-label span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .menu-checkbox:checked ~ .hamburger-label span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-checkbox:checked ~ .hamburger-label span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
   }
 }
