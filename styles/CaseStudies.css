@@ -104,7 +104,6 @@
 .project-gallery .project-imag {
   height: 100%;
   object-fit: contain;
-  /* object-position: top; */
   border: 1px solid #d8d8d8;
   border-radius: 8px;
 }
@@ -140,5 +139,11 @@
   #case-studies {
     padding: 40px 30px;
     width: 100%;
+  }
+  .case-studies-project {
+    flex-direction: column;
+  }
+  .case-studies-project.reverse {
+    flex-direction: column;
   }
 }

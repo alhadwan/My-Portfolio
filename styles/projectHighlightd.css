@@ -4,9 +4,7 @@
   padding: 60px 120px;
   display: flex;
   flex-direction: column;
-  gap: 80px;
-  justify-content: center;
-  align-items: center;
+  gap: 10px;
 }
 .project-highlights-header {
   text-align: center;
@@ -70,7 +68,6 @@
   background-color: #111;
   border: 1px solid #222;
   border-radius: 12px;
-  padding: 30px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
