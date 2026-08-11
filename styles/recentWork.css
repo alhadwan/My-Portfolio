@@ -1,35 +1,29 @@
 #recent-work {
   background-color: rgb(255, 255, 255);
-  min-height: 100vh;
+  min-height: 100dvh;
   padding: 60px 120px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  justify-content: center;
-  align-items: center;
+  gap: 10px;
 }
 .recent-work-intro {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .recent-work-intro h1::after {
   content: "";
   display: block;
-  margin: 1px auto 0;
+  margin: 10px auto 0;
   background-color: black;
   height: 3px;
   width: 60px;
   border-radius: 3px;
 }
 .recent-work-intro p {
-  text-align: center;
+  max-width: 600px;
+  margin: 0px auto;
   line-height: 25px;
-  max-width: 700px;
-  margin: 15px auto;
+  padding: 20px 0px;
 }
 .recent-work-carousel {
   display: flex;
@@ -65,8 +59,6 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  /* flex: 1 1 0; */
-  /* min-width: 0; */
 }
 .card-img {
   display: flex;
@@ -104,4 +96,11 @@
 }
 .carouselcard button:hover {
   background-color: rgb(28, 160, 43);
+}
+
+@media (max-width: 768px) {
+  #recent-work {
+    padding: 40px 30px;
+    width: 100%;
+  }
 }

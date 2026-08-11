@@ -112,6 +112,12 @@
     align-items: center;
     gap: 60px;
   }
+  @media (max-width: 768px) {
+    #home {
+      padding: 40px 30px;
+      width: 100%;
+    }
+  }
 }
 @media (min-width: 1200px) {
   .ali-photo {
